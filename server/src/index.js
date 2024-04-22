@@ -1,3 +1,6 @@
+// Importando var de ambientes 
+require('dotenv').config()
+
 // Importando pacotes
 const express = require("express");
 
@@ -9,7 +12,7 @@ app.use(express.json());
 
 // Rota Principal
 app.get("/", (req, res) => {
-  return res.send("Bem Vindo a API...");
+  return res.send(`<h1 style="font-family: Arial,sans serif;font-size:20px;">Bem Vindo a API...</h1>`);
 });
 
 // Definindo Rotas
