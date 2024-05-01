@@ -1,8 +1,5 @@
-// Importando var de ambientes
-require("dotenv").config();
-
-// Importando pacotes
-const express = require("express");
+import express from "express";
+import dotenv from "dotenv";
 
 // Iniciando Variável da Aplicação
 const app = express();
@@ -12,19 +9,25 @@ app.use(express.json());
 
 // Rota Principal
 app.get("/", (req, res) => {
+  console.log("buscando rota inicial...")
   return res.send(
     `<h1 style="font-family: Arial,sans serif;font-size:20px;">Bem Vindo a API...</h1>`,
   );
 });
 
+// Importando Roteadores
+import productRoutes from "./routes/productRoutes.js";
+import userRoutes from "./routes/userRoutes.js";
+import authRoutes from "./routes/authRoutes.js";
+
 // Definindo Rotas
-app.use("/products", require("./routes/productRoutes.js"));
-app.use("/users", require("./routes/userRoutes.js"));
-app.use("/auth", require("./routes/authRoutes.js"));
+app.use("/products", productRoutes);
+app.use("/users", userRoutes);
+app.use("/auth", authRoutes);
 
 // Configurando Aplicação
 const port = 3001;
-const server = require("./server.js");
+import server from './server.js'
 
 // Executa aplicação
 app.listen(port, server);

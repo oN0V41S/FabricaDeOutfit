@@ -1,8 +1,8 @@
 // Importando suporte a conf de var de ambiente com ".env"
-require('dotenv').config();
+import dotenv from 'dotenv';
 
 // Importando pacotes
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 function App() {
   // String de Conexão com Banco
@@ -12,4 +12,4 @@ function App() {
   console.log("Executando API na porta 3001");
 }
 
-module.exports = App;
+export default App;

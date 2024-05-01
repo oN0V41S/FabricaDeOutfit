@@ -1,20 +1,15 @@
 // Importando Pacotes
-const Router = require("express");
+import Router from "express";
 
 // Iniciando Roteador
 const router = Router();
 
 // Importando Controladores
-const [
-  getUsers,
-  postUser,
-  deleteUser,
-  putUser,
-] = require("../controller/userController.js");
+import userController from "../controller/userController.js";
 
-router.get("/", getUsers);
-router.post("/", postUser);
-router.delete("/:id", deleteUser);
-router.put("/:id", putUser);
+router.get("/", userController.getUsers);
+router.post("/", userController.postUser);
+router.delete("/:id", userController.deleteUser);
+router.put("/:id", userController.putUser);
 
-module.exports = router;
+export default router;

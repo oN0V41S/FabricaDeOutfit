@@ -1,5 +1,5 @@
 // Importando Modelo
-const User = require("../model/user.js");
+import User from "../model/user.js";
 
 // Tratamento de requisição GET
 async function getUsers(req, res){
@@ -47,4 +47,4 @@ async function deleteUser(req, res){
   return res.send(user);
 }
 
-module.exports = [getUsers, postUser, deleteUser, putUser];
+export default {getUsers, postUser, deleteUser, putUser};

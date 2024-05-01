@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+import mongoose from 'mongoose'
 
 // Modelo do objeto de Usuário
 const User = mongoose.model("User", {
@@ -9,4 +9,4 @@ const User = mongoose.model("User", {
   itens_card: [String]
 });
 
-module.exports = User;
+export default User;

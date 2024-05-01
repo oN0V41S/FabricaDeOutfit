@@ -1,9 +1,9 @@
 // Importando Pacotes
-const Router = require("express");
+import Router from "express";
 
 const authRouter = Router();
 
-const loginController = require("../controller/authController");
+import loginController from "../controller/authController.js";
 authRouter.post("/", loginController);
 
-module.exports = authRouter;
+export default authRouter;

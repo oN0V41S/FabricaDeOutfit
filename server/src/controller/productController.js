@@ -1,5 +1,5 @@
 // Importando modelos
-const Product = require("../model/product.js");
+import Product from "../model/product.js";
 
 // Tratamento de requisição GET
 async function getProduct(req, res) {
@@ -57,4 +57,4 @@ async function deleteProduct(req, res) {
   return res.send(product);
 }
 
-module.exports = [getProduct, postProduct, deleteProduct, putProduct];
+export default {getProduct, postProduct, deleteProduct, putProduct};

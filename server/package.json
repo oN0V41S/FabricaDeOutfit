@@ -3,8 +3,9 @@
   "version": "1.4.0",
   "description": "API desenvolvida com Express e Node, para um projeto de e-commerce. v1.4: adicionado endpoint de autenticaçã.",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "node src/index.js"
+    "start": "nodemon src/index.js"
   },
   "keywords": [],
   "author": "Rafael Novais",
@@ -16,5 +17,8 @@
     "jsonwebtoken": "^9.0.2",
     "mongodb": "^6.5.0",
     "mongoose": "^8.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
   }
 }

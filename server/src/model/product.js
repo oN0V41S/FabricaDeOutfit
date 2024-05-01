@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+import mongoose from 'mongoose'
 
 // Modelo do objeto de Produto que será utilizado no banco
 const Product = mongoose.model('Film', {
@@ -8,4 +8,4 @@ const Product = mongoose.model('Film', {
   images:       [String]
 });
 
-module.exports = Product;
+export default Product;
