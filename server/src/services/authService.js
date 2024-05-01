@@ -11,8 +11,10 @@ function generateToken(id){
 
 // Validando email e senha do usuário
 const loginService = async ({ email, password }) => {
-  const user = await User.find(email);
+  console.log(email)
+  const user = await User.find({email: `${email}`});
   if(!user) throw new Error ("Email inválido");
+  console.log(user);
 
   const isPasswordValid = await bcrypt.compare(password, user.password);
   if(!isPasswordValid) throw new Error("Senha Inválida");

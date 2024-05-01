@@ -1,10 +1,10 @@
 {
   "name": "criacao-de-api-node",
-  "version": "1.0.0",
-  "description": "API desenvolvida com Node.js e mongoDB",
+  "version": "1.4.0",
+  "description": "API desenvolvida com Express e Node, para um projeto de e-commerce. v1.4: adicionado endpoint de autenticaçã.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/index.js"
   },
   "keywords": [],
   "author": "Rafael Novais",
