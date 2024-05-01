@@ -1,6 +1,6 @@
 {
   "name": "criacao-de-api-node",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "API desenvolvida com Express e Node, para um projeto de e-commerce. v1.4: adicionado endpoint de autenticaçã.",
   "main": "index.js",
   "type": "module",
